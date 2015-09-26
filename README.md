@@ -4,7 +4,7 @@
 
 Note that **iOS-imageset** depends on [PIL](http://www.pythonware.com/products/pil/),install it before using.
 
-You can follow either follow the instructions below or visit [my blog](http://jcggg.me):
+You can follow either follow the instructions below or visit [my blog](http://jcggg.me/2015/09/26/iOS%E5%88%87%E5%9B%BE%E6%89%93%E5%8C%85%E8%84%9A%E6%9C%AC/):
 
 ```
 1. python imageset.py -d(or --dir) [directory]:
