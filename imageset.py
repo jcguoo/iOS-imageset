@@ -18,23 +18,15 @@ def make_imageset(path):
 		os.mkdir(imagesetpath)
 
 	im = Image.open(path)
-	im.save('%s/%s@3x.png' % (imagesetpath, name))
-
 	(w, h) = im.size
 
-	im.thumbnail((w*2//3, h*2//3))
-	im.save('%s/%s@2x.png' % (imagesetpath, name))
+	im.save('%s/%s@3x.png' % (imagesetpath, name), quality = 100)
 
-	im.thumbnail((w//3, h//3))
-	im.save('%s/%s.png' % (imagesetpath, name))
+	im2 = im.resize((w*2//3, h*2//3), Image.ANTIALIAS)
+	im2.save('%s/%s@2x.png' % (imagesetpath, name), quality = 100)
 
 	contents = {
 	  "images" : [
-	    {
-	      "idiom" : "universal",
-	      "filename" : "%s.png" % name,
-	      "scale" : "1x"
-	    },
 	    {
 	      "idiom" : "universal",
 	      "filename" : "%s@2x.png" % name,
